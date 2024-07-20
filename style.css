@@ -1,0 +1,186 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-header {
+  display: flex;
+  align-items: center;
+}
+
+.contact-text h3 {
+  margin-left: 20px;
+  color: #000000;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+.container {
+  width: 650px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #000000;
+}
+
+.contact-info {
+  margin-left: 20px;
+}
+
+.contact-info i {
+  width: 15px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  color: #555;
+}
+
+.contact-label {
+  display: inline-block;
+  min-width: 50px; /* Äiá»u chá»‰nh khoáº£ng cÃ¡ch giá»¯a icon vÃ  text */
+  margin-left: 10px;
+}
+
+.contact-item a {
+  color: #3b5998;
+  text-decoration: none;
+  margin-left: 5px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.more-inf {
+  margin-top: 5px;
+  text-align: center;
+}
+
+.caption {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 30px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.favourites {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* 3 cá»™t vá»›i kÃ­ch thÆ°á»›c báº±ng nhau */
+  gap: 10px; /* Khoáº£ng cÃ¡ch giá»¯a cÃ¡c pháº§n tá»­ */
+}
+
+.favourite-label {
+  border: 1px solid #856666;
+  border-radius: 30px;
+  width: 210px;
+  display: inline-block;
+}
+
+.favourite a {
+  color: inherit; /* Káº¿ thá»«a mÃ u chá»¯ tá»« pháº§n tá»­ cha */
+}
+
+.favourite:hover {
+  color: #003ec4;
+}
+
+.images {
+  width: 100px;
+  height: 100px;
+}
+
+.chill {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(
+    5,
+    1fr
+  ); /* 3 cá»™t vá»›i kÃ­ch thÆ°á»›c báº±ng nhau */
+  gap: 10px; /* Khoáº£ng cÃ¡ch giá»¯a cÃ¡c pháº§n tá»­ */
+}
+
+.chill-images {
+  width: 100px;
+  height: 130px;
+  object-fit: cover;
+}
+
+/* CÃ¡c kiá»ƒu dÃ¡ng hiá»‡n cÃ³ */
+
+.back {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.back a {
+  display: inline-block;
+  padding: 7px 10px;
+  background-color: #003ec4; /* MÃ u ná»n cá»§a nÃºt */
+  color: #fff; /* MÃ u chá»¯ */
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.back a:hover {
+  background-color: #002a8b; /* MÃ u ná»n khi hover */
+  color: #e6e6e6; /* MÃ u chá»¯ khi hover */
+}
+
+.listen {
+  display: flex;
+  justify-content: center; /* CÄƒn giá»¯a theo chiá»u ngang */
+  align-items: center; /* CÄƒn giá»¯a theo chiá»u dá»c */
+  text-align: center;
+  margin-top: 20px;
+}
+
+.spot {
+  width: 500px;
+  height: 300px;
+  object-fit: contain; /* Giá»¯ nguyÃªn tá»· lá»‡ áº£nh */
+  margin-top: -50px;
+}
+
+.lyrics {
+  margin-top: -50px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+}
