@@ -1,69 +1,134 @@
-/* Reset CSS */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: Arial, sans-serif;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
 }
 
 .contact-header {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
 }
 
-.contact-header img.avatar {
+.contact-text h3 {
+  margin-left: 20px;
+  color: #000000;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.container {
+  width: 650px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #000000;
 }
 
 .contact-info {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.contact-info i {
+  width: 15px;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
+  margin-top: 10px;
+  color: #555;
 }
 
-.contact-item i {
-  margin-right: 10px;
+.contact-label {
+  display: inline-block;
+  min-width: 50px; /* Điều chỉnh khoảng cách giữa icon và text */
+  margin-left: 10px;
 }
 
 .contact-item a {
-  color: blue;
+  color: #3b5998;
   text-decoration: none;
+  margin-left: 5px;
 }
 
-.more-inf .favourites {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
 }
 
-.favourite {
-  flex: 1;
-  min-width: 200px;
+.more-inf {
+  margin-top: 5px;
   text-align: center;
 }
 
-.favourite img.images {
-  width: 100%;
-  height: auto;
+.caption {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 30px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.favourites {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cột với kích thước bằng nhau */
+  gap: 10px; /* Khoảng cách giữa các phần tử */
+}
+
+.favourite-label {
+  border: 1px solid #856666;
+  border-radius: 30px;
+  width: 210px;
+  display: inline-block;
+}
+
+.favourite a {
+  color: inherit; /* Kế thừa màu chữ từ phần tử cha */
+}
+
+.favourite:hover {
+  color: #003ec4;
+}
+
+.images {
+  width: 100px;
+  height: 100px;
+}
+
+.chill {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5 cột với kích thước bằng nhau */
+  gap: 10px; /* Khoảng cách giữa các phần tử */
+}
+
+.chill-images {
+  width: 100px;
+  height: 130px;
+  object-fit: cover;
 }
 
 /* Responsive Design */
@@ -73,31 +138,88 @@ body {
     align-items: center;
   }
 
-  .contact-header img.avatar {
-    margin-right: 0;
+  .avatar {
+    width: 80px;
+    height: 80px;
+    margin-left: 0;
     margin-bottom: 10px;
   }
 
-  .more-inf .favourites {
-    flex-direction: column;
+  .favourites {
+    grid-template-columns: repeat(2, 1fr); /* 2 cột trên màn hình nhỏ hơn */
   }
 
-  .favourite {
-    min-width: 100%;
+  .chill {
+    grid-template-columns: repeat(3, 1fr); /* 3 cột trên màn hình nhỏ hơn */
   }
 }
 
 @media only screen and (max-width: 480px) {
   .container {
+    width: 100%;
     padding: 10px;
   }
 
-  .contact-header img.avatar {
+  .avatar {
+    width: 60px;
+    height: 60px;
+  }
+
+  .favourites {
+    grid-template-columns: 1fr; /* 1 cột trên màn hình nhỏ */
+  }
+
+  .chill {
+    grid-template-columns: 1fr; /* 1 cột trên màn hình nhỏ */
+  }
+
+  .images {
     width: 80px;
     height: 80px;
   }
 
-  .favourite img.images {
-    width: 100%;
+  .chill-images {
+    width: 80px;
+    height: 100px;
   }
+}
+
+.back {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.back a {
+  display: inline-block;
+  padding: 7px 10px;
+  background-color: #003ec4; /* MÃƒÂ u nÃ¡Â»Ân cÃ¡Â»Â§a nÃƒÂºt */
+  color: #fff; /* MÃƒÂ u chÃ¡Â»Â¯ */
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.back a:hover {
+  background-color: #002a8b; /* MÃƒÂ u nÃ¡Â»Ân khi hover */
+  color: #e6e6e6; /* MÃƒÂ u chÃ¡Â»Â¯ khi hover */
+}
+
+.listen {
+  display: flex;
+  justify-content: center; /* CÃ„Æ’n giÃ¡Â»Â¯a theo chiÃ¡Â»Âu ngang */
+  align-items: center; /* CÃ„Æ’n giÃ¡Â»Â¯a theo chiÃ¡Â»Âu dÃ¡Â»Âc */
+  text-align: center;
+  margin-top: 20px;
+}
+
+.spot {
+  width: 500px;
+  height: 300px;
+  object-fit: contain; /* GiÃ¡Â»Â¯ nguyÃƒÂªn tÃ¡Â»Â· lÃ¡Â»â€¡ Ã¡ÂºÂ£nh */
+  margin-top: -50px;
+}
+
+.lyrics {
+  margin-top: -50px;
 }
