@@ -5,9 +5,20 @@ body {
   padding: 0;
 }
 
+.container {
+  width: 100%; /* Chiếm toàn bộ chiều rộng của màn hình */
+  max-width: 650px; /* Giới hạn chiều rộng tối đa */
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Tính toán padding và border vào chiều rộng */
+}
+
 .contact-header {
   display: flex;
   align-items: center;
+  flex-wrap: wrap; /* Cho phép các phần tử xuống hàng khi không đủ chỗ */
 }
 
 .contact-text h3 {
@@ -20,14 +31,7 @@ body {
   height: 50px;
   border-radius: 50%;
   margin-left: 20px;
-}
-
-.container {
-  width: 650px;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Tính toán border vào kích thước ảnh */
 }
 
 h1 {
@@ -69,6 +73,7 @@ textarea {
   margin-top: 5px;
   border: 1px solid #ddd;
   border-radius: 5px;
+  box-sizing: border-box; /* Tính toán padding vào chiều rộng */
 }
 
 .more-inf {
@@ -98,8 +103,10 @@ textarea {
 .favourite-label {
   border: 1px solid #856666;
   border-radius: 30px;
-  width: 210px;
+  width: 100%; /* Chiếm toàn bộ chiều rộng của cột */
+  max-width: 210px; /* Giới hạn chiều rộng tối đa */
   display: inline-block;
+  box-sizing: border-box; /* Tính toán padding vào chiều rộng */
 }
 
 .favourite a {
@@ -111,8 +118,9 @@ textarea {
 }
 
 .images {
-  width: 100px;
-  height: 100px;
+  width: 100%;
+  height: auto; /* Đảm bảo ảnh không bị kéo dài */
+  max-width: 100px; /* Giới hạn chiều rộng tối đa */
 }
 
 .chill {
@@ -126,9 +134,11 @@ textarea {
 }
 
 .chill-images {
-  width: 100px;
-  height: 130px;
-  object-fit: cover;
+  width: 100%;
+  height: auto; /* Đảm bảo ảnh không bị kéo dài */
+  max-width: 100px; /* Giới hạn chiều rộng tối đa */
+  max-height: 130px; /* Giới hạn chiều cao tối đa */
+  object-fit: cover; /* Giữ tỷ lệ ảnh */
 }
 
 /* Responsive Design */
@@ -175,12 +185,13 @@ textarea {
 
   .images {
     width: 80px;
-    height: 80px;
+    height: auto; /* Đảm bảo ảnh không bị kéo dài */
   }
 
   .chill-images {
     width: 80px;
-    height: 100px;
+    height: auto; /* Đảm bảo ảnh không bị kéo dài */
+    max-height: 100px; /* Giới hạn chiều cao tối đa */
   }
 }
 
