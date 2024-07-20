@@ -1,3 +1,4 @@
+/* Đặt kiểu mặc định cho toàn bộ trang */
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
@@ -5,22 +6,13 @@ body {
   padding: 0;
 }
 
-.container {
-  width: 100%; /* Chiếm toàn bộ chiều rộng của màn hình */
-  max-width: 650px; /* Giới hạn chiều rộng tối đa */
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box; /* Tính toán padding và border vào chiều rộng */
-}
-
+/* Định dạng tiêu đề liên hệ */
 .contact-header {
   display: flex;
   align-items: center;
-  flex-wrap: wrap; /* Cho phép các phần tử xuống hàng khi không đủ chỗ */
 }
 
+/* Định dạng tiêu đề và ảnh đại diện */
 .contact-text h3 {
   margin-left: 20px;
   color: #000000;
@@ -31,14 +23,24 @@ body {
   height: 50px;
   border-radius: 50%;
   margin-left: 20px;
-  box-sizing: border-box; /* Tính toán border vào kích thước ảnh */
 }
 
+/* Định dạng container chính */
+.container {
+  width: 650px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Định dạng tiêu đề chính */
 h1 {
   text-align: center;
   color: #000000;
 }
 
+/* Định dạng thông tin liên hệ */
 .contact-info {
   margin-left: 20px;
 }
@@ -73,7 +75,6 @@ textarea {
   margin-top: 5px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  box-sizing: border-box; /* Tính toán padding vào chiều rộng */
 }
 
 .more-inf {
@@ -90,23 +91,19 @@ textarea {
   display: inline-block;
 }
 
+/* Định dạng yêu thích */
 .favourites {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 cột với kích thước bằng nhau */
   gap: 10px; /* Khoảng cách giữa các phần tử */
+  margin-top: 20px;
 }
 
 .favourite-label {
   border: 1px solid #856666;
   border-radius: 30px;
-  width: 100%; /* Chiếm toàn bộ chiều rộng của cột */
-  max-width: 210px; /* Giới hạn chiều rộng tối đa */
+  width: 210px;
   display: inline-block;
-  box-sizing: border-box; /* Tính toán padding vào chiều rộng */
 }
 
 .favourite a {
@@ -117,84 +114,26 @@ textarea {
   color: #003ec4;
 }
 
+/* Định dạng hình ảnh */
 .images {
-  width: 100%;
-  height: auto; /* Đảm bảo ảnh không bị kéo dài */
-  max-width: 100px; /* Giới hạn chiều rộng tối đa */
+  width: 100px;
+  height: 100px;
 }
 
 .chill {
-  display: flex;
-  justify-content: space-between;
-  text-align: center;
-  margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(5, 1fr); /* 5 cột với kích thước bằng nhau */
   gap: 10px; /* Khoảng cách giữa các phần tử */
+  margin-top: 20px;
 }
 
 .chill-images {
-  width: 100%;
-  height: auto; /* Đảm bảo ảnh không bị kéo dài */
-  max-width: 100px; /* Giới hạn chiều rộng tối đa */
-  max-height: 130px; /* Giới hạn chiều cao tối đa */
-  object-fit: cover; /* Giữ tỷ lệ ảnh */
+  width: 100px;
+  height: 130px;
+  object-fit: cover;
 }
 
-/* Responsive Design */
-@media only screen and (max-width: 768px) {
-  .contact-header {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .avatar {
-    width: 80px;
-    height: 80px;
-    margin-left: 0;
-    margin-bottom: 10px;
-  }
-
-  .favourites {
-    grid-template-columns: repeat(2, 1fr); /* 2 cột trên màn hình nhỏ hơn */
-  }
-
-  .chill {
-    grid-template-columns: repeat(3, 1fr); /* 3 cột trên màn hình nhỏ hơn */
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  .container {
-    width: 100%;
-    padding: 10px;
-  }
-
-  .avatar {
-    width: 60px;
-    height: 60px;
-  }
-
-  .favourites {
-    grid-template-columns: 1fr; /* 1 cột trên màn hình nhỏ */
-  }
-
-  .chill {
-    grid-template-columns: 1fr; /* 1 cột trên màn hình nhỏ */
-  }
-
-  .images {
-    width: 80px;
-    height: auto; /* Đảm bảo ảnh không bị kéo dài */
-  }
-
-  .chill-images {
-    width: 80px;
-    height: auto; /* Đảm bảo ảnh không bị kéo dài */
-    max-height: 100px; /* Giới hạn chiều cao tối đa */
-  }
-}
-
+/* Định dạng nút quay lại */
 .back {
   margin-top: 10px;
   text-align: center;
@@ -203,8 +142,8 @@ textarea {
 .back a {
   display: inline-block;
   padding: 7px 10px;
-  background-color: #003ec4; /* MÃƒÂ u nÃ¡Â»Ân cÃ¡Â»Â§a nÃƒÂºt */
-  color: #fff; /* MÃƒÂ u chÃ¡Â»Â¯ */
+  background-color: #003ec4; /* Màu nền của nút */
+  color: #fff; /* Màu chữ */
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
@@ -212,14 +151,15 @@ textarea {
 }
 
 .back a:hover {
-  background-color: #002a8b; /* MÃƒÂ u nÃ¡Â»Ân khi hover */
-  color: #e6e6e6; /* MÃƒÂ u chÃ¡Â»Â¯ khi hover */
+  background-color: #002a8b; /* Màu nền khi hover */
+  color: #e6e6e6; /* Màu chữ khi hover */
 }
 
+/* Định dạng phần nghe nhạc */
 .listen {
   display: flex;
-  justify-content: center; /* CÃ„Æ’n giÃ¡Â»Â¯a theo chiÃ¡Â»Âu ngang */
-  align-items: center; /* CÃ„Æ’n giÃ¡Â»Â¯a theo chiÃ¡Â»Âu dÃ¡Â»Âc */
+  justify-content: center; /* Căn giữa theo chiều ngang */
+  align-items: center; /* Căn giữa theo chiều dọc */
   text-align: center;
   margin-top: 20px;
 }
@@ -227,10 +167,54 @@ textarea {
 .spot {
   width: 500px;
   height: 300px;
-  object-fit: contain; /* GiÃ¡Â»Â¯ nguyÃƒÂªn tÃ¡Â»Â· lÃ¡Â»â€¡ Ã¡ÂºÂ£nh */
+  object-fit: contain; /* Giữ tỷ lệ khung hình của ảnh */
   margin-top: -50px;
 }
 
 .lyrics {
   margin-top: -50px;
+}
+
+/* Media queries cho thiết bị di động */
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 90%; /* Điều chỉnh kích thước container */
+    margin: 20px auto; /* Giảm khoảng cách margin */
+    padding: 10px; /* Điều chỉnh padding */
+  }
+
+  .avatar {
+    width: 40px; /* Điều chỉnh kích thước ảnh đại diện */
+    height: 40px;
+  }
+
+  .contact-info {
+    margin-left: 0; /* Loại bỏ margin-left */
+  }
+
+  .contact-item {
+    flex-direction: column; /* Hiển thị icon và text theo chiều dọc */
+    align-items: flex-start; /* Căn chỉnh các phần tử theo chiều ngang */
+  }
+
+  .contact-label {
+    margin-left: 0; /* Loại bỏ margin-left */
+    margin-top: 5px; /* Thêm khoảng cách phía trên */
+  }
+
+  .favourites,
+  .chill {
+    grid-template-columns: repeat(2, 1fr); /* Hiển thị 2 cột thay vì nhiều cột */
+  }
+
+  .images,
+  .chill-images {
+    width: 80px; /* Điều chỉnh kích thước hình ảnh */
+    height: 80px;
+  }
+
+  .spot {
+    width: 100%; /* Đảm bảo ảnh fit vừa màn hình */
+    height: auto; /* Giữ tỷ lệ khung hình */
+  }
 }
