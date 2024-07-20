@@ -1,4 +1,3 @@
-/* Đặt kiểu mặc định cho toàn bộ trang */
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
@@ -6,13 +5,11 @@ body {
   padding: 0;
 }
 
-/* Định dạng tiêu đề liên hệ */
 .contact-header {
   display: flex;
   align-items: center;
 }
 
-/* Định dạng tiêu đề và ảnh đại diện */
 .contact-text h3 {
   margin-left: 20px;
   color: #000000;
@@ -25,7 +22,6 @@ body {
   margin-left: 20px;
 }
 
-/* Định dạng container chính */
 .container {
   width: 650px;
   margin: 50px auto;
@@ -34,13 +30,11 @@ body {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Định dạng tiêu đề chính */
 h1 {
   text-align: center;
   color: #000000;
 }
 
-/* Định dạng thông tin liên hệ */
 .contact-info {
   margin-left: 20px;
 }
@@ -58,7 +52,7 @@ h1 {
 
 .contact-label {
   display: inline-block;
-  min-width: 50px; /* Điều chỉnh khoảng cách giữa icon và text */
+  min-width: 50px; /* Ã„ÂiÃ¡Â»Âu chÃ¡Â»â€°nh khoÃ¡ÂºÂ£ng cÃƒÂ¡ch giÃ¡Â»Â¯a icon vÃƒÂ  text */
   margin-left: 10px;
 }
 
@@ -91,12 +85,17 @@ textarea {
   display: inline-block;
 }
 
-/* Định dạng yêu thích */
 .favourites {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cột với kích thước bằng nhau */
-  gap: 10px; /* Khoảng cách giữa các phần tử */
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
   margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* 3 cÃ¡Â»â„¢t vÃ¡Â»â€ºi kÃƒÂ­ch thÃ†Â°Ã¡Â»â€ºc bÃ¡ÂºÂ±ng nhau */
+  gap: 10px; /* KhoÃ¡ÂºÂ£ng cÃƒÂ¡ch giÃ¡Â»Â¯a cÃƒÂ¡c phÃ¡ÂºÂ§n tÃ¡Â»Â­ */
 }
 
 .favourite-label {
@@ -107,24 +106,29 @@ textarea {
 }
 
 .favourite a {
-  color: inherit; /* Kế thừa màu chữ từ phần tử cha */
+  color: inherit; /* KÃ¡ÂºÂ¿ thÃ¡Â»Â«a mÃƒÂ u chÃ¡Â»Â¯ tÃ¡Â»Â« phÃ¡ÂºÂ§n tÃ¡Â»Â­ cha */
 }
 
 .favourite:hover {
   color: #003ec4;
 }
 
-/* Định dạng hình ảnh */
 .images {
   width: 100px;
   height: 100px;
 }
 
 .chill {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 cột với kích thước bằng nhau */
-  gap: 10px; /* Khoảng cách giữa các phần tử */
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
   margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(
+    5,
+    1fr
+  ); /* 3 cÃ¡Â»â„¢t vÃ¡Â»â€ºi kÃƒÂ­ch thÃ†Â°Ã¡Â»â€ºc bÃ¡ÂºÂ±ng nhau */
+  gap: 10px; /* KhoÃ¡ÂºÂ£ng cÃƒÂ¡ch giÃ¡Â»Â¯a cÃƒÂ¡c phÃ¡ÂºÂ§n tÃ¡Â»Â­ */
 }
 
 .chill-images {
@@ -133,7 +137,8 @@ textarea {
   object-fit: cover;
 }
 
-/* Định dạng nút quay lại */
+/* CÃƒÂ¡c kiÃ¡Â»Æ’u dÃƒÂ¡ng hiÃ¡Â»â€¡n cÃƒÂ³ */
+
 .back {
   margin-top: 10px;
   text-align: center;
@@ -142,8 +147,8 @@ textarea {
 .back a {
   display: inline-block;
   padding: 7px 10px;
-  background-color: #003ec4; /* Màu nền của nút */
-  color: #fff; /* Màu chữ */
+  background-color: #003ec4; /* MÃƒÂ u nÃ¡Â»Ân cÃ¡Â»Â§a nÃƒÂºt */
+  color: #fff; /* MÃƒÂ u chÃ¡Â»Â¯ */
   text-decoration: none;
   border-radius: 5px;
   font-weight: bold;
@@ -151,15 +156,14 @@ textarea {
 }
 
 .back a:hover {
-  background-color: #002a8b; /* Màu nền khi hover */
-  color: #e6e6e6; /* Màu chữ khi hover */
+  background-color: #002a8b; /* MÃƒÂ u nÃ¡Â»Ân khi hover */
+  color: #e6e6e6; /* MÃƒÂ u chÃ¡Â»Â¯ khi hover */
 }
 
-/* Định dạng phần nghe nhạc */
 .listen {
   display: flex;
-  justify-content: center; /* Căn giữa theo chiều ngang */
-  align-items: center; /* Căn giữa theo chiều dọc */
+  justify-content: center; 
+  align-items: center
   text-align: center;
   margin-top: 20px;
 }
@@ -167,54 +171,10 @@ textarea {
 .spot {
   width: 500px;
   height: 300px;
-  object-fit: contain; /* Giữ tỷ lệ khung hình của ảnh */
+  object-fit: contain; 
   margin-top: -50px;
 }
 
 .lyrics {
   margin-top: -50px;
-}
-
-/* Media queries cho thiết bị di động */
-@media only screen and (max-width: 600px) {
-  .container {
-    width: 90%; /* Điều chỉnh kích thước container */
-    margin: 20px auto; /* Giảm khoảng cách margin */
-    padding: 10px; /* Điều chỉnh padding */
-  }
-
-  .avatar {
-    width: 40px; /* Điều chỉnh kích thước ảnh đại diện */
-    height: 40px;
-  }
-
-  .contact-info {
-    margin-left: 0; /* Loại bỏ margin-left */
-  }
-
-  .contact-item {
-    flex-direction: column; /* Hiển thị icon và text theo chiều dọc */
-    align-items: flex-start; /* Căn chỉnh các phần tử theo chiều ngang */
-  }
-
-  .contact-label {
-    margin-left: 0; /* Loại bỏ margin-left */
-    margin-top: 5px; /* Thêm khoảng cách phía trên */
-  }
-
-  .favourites,
-  .chill {
-    grid-template-columns: repeat(2, 1fr); /* Hiển thị 2 cột thay vì nhiều cột */
-  }
-
-  .images,
-  .chill-images {
-    width: 80px; /* Điều chỉnh kích thước hình ảnh */
-    height: 80px;
-  }
-
-  .spot {
-    width: 100%; /* Đảm bảo ảnh fit vừa màn hình */
-    height: auto; /* Giữ tỷ lệ khung hình */
-  }
 }
