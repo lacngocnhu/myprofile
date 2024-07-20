@@ -86,9 +86,28 @@
               </div>
             </a>
           </div>
+          <form id="feedbackForm" action="submit_feedback.php" method="post">
+            <label for="noidung">Bạn có muốn nhắn gì với mình không?</label>
+            <textarea
+              id="noidung"
+              name="noidung"
+              class="feedback"
+              placeholder="Mạnh dạn gửi đi, mình cam kết là ẩn danh."
+            ></textarea>
+            <button type="submit">Gửi</button>
+          </form>
         </div>
       </div>
     </div>
     <script src="script.js"></script>
   </body>
 </html>
+<script>
+  window.onload = function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const message = urlParams.get("message");
+    if (message) {
+      alert(message);
+    }
+  };
+</script>
