@@ -53,7 +53,7 @@ h1 {
 
 .contact-label {
   display: inline-block;
-  min-width: 50px; 
+  min-width: 50px;
   margin-left: 10px;
 }
 
@@ -105,7 +105,7 @@ textarea {
 }
 
 .favourite a {
-  color: inherit; /* Káº¿ thá»«a mÃ u chá»¯ tá»« pháº§n tá»­ cha */
+  color: inherit;
 }
 
 .favourite:hover {
@@ -162,19 +162,20 @@ textarea {
 
 .listen {
   display: flex;
-  justify-content: center; 
-  align-items: center
+  justify-content: center;
+  align-items: center;
   text-align: center;
   margin-top: 20px;
 }
 
 .spot {
-  width: 500px;
-  height: 300px;
-  object-fit: contain; 
-  margin-top: -50px;
+  width: 100%;
+  max-width: 500px; /* Giới hạn chiều rộng tối đa */
+  height: auto; /* Đảm bảo tỷ lệ khung hình gốc */
+  object-fit: contain;
+  margin-top: 10px;
 }
 
 .lyrics {
-  margin-top: -50px;
+  margin-top: 20px;
 }
