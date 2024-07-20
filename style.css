@@ -179,7 +179,7 @@ textarea {
   margin-top: -50px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 300px) {
   .container {
     padding: 10px;
   }
