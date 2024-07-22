@@ -8,11 +8,15 @@ body {
 .contact-header {
   display: flex;
   align-items: center;
+  margin-top: 15px;
 }
 
-.contact-text h3 {
+.contact-text a {
   margin-left: 20px;
   color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .avatar {
@@ -29,11 +33,6 @@ body {
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h1 {
-  text-align: center;
-  color: #000000;
 }
 
 .contact-info {
@@ -85,7 +84,7 @@ h1 {
   display: block;
   width: 100%;
   padding: 10px;
-  background-color: #007bff;
+  background-color: #0051ff;
   color: white;
   border-radius: 10px;
   text-align: center;
