@@ -126,11 +126,11 @@
             if (response.ok) {
               return response.text(); // Đọc phản hồi dưới dạng văn bản
             } else {
-              throw new Error("Có lỗi xảy ra khi gửi form.");
+              throw new Error("Có lỗi xảy ra khi gửi.");
             }
           })
           .then((text) => {
-            alert("Form đã được gửi thành công!");
+            alert("Lời nhắn đã được gửi thành công!");
             // Xử lý thông tin phản hồi nếu cần
             console.log("Phản hồi:", text);
             // Tải lại form nếu cần
