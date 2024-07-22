@@ -63,17 +63,17 @@ h1 {
   margin-left: 5px;
 }
 
-input,
+/* input,
 textarea {
   width: 100%;
   padding: 10px;
   margin-top: 5px;
   border: 1px solid #ddd;
   border-radius: 5px;
-}
+} */
 
 .more-inf {
-  margin-top: 5px;
+  margin-top: 20px;
   text-align: center;
 }
 
@@ -82,10 +82,9 @@ textarea {
   padding: 10px;
   background-color: #f9f9f9;
   border-radius: 30px;
-  margin-top: 20px;
   display: inline-block;
 }
-
+/* PHẦN INDEX.HTML */
 .favourites {
   display: flex;
   flex-wrap: wrap;
@@ -117,7 +116,7 @@ textarea {
   height: 100px;
 }
 
-#feedbackForm {
+/* #feedbackForm {
   width: 70%;
   max-width: 300px;
   margin: 0 auto;
@@ -137,8 +136,27 @@ textarea.feedback {
   resize: none;
   font-size: 16px;
   line-height: 1.5;
+} */
+
+/* PHẦN GAME */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
 }
 
+.video-container video,
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* PHẦN ĐI DẠO CHILL */
 .chill {
   display: flex;
   flex-wrap: wrap;
@@ -149,7 +167,7 @@ textarea.feedback {
 
 .chill-label {
   flex: 1 1 calc(20% - 10px); /* Đảm bảo mỗi phần tử chiếm 1/3 chiều rộng cộng thêm khoảng cách */
-  margin-bottom: 20px; /* Khoảng cách dưới các phần tử */
+  margin-top: 15px; /* Khoảng cách dưới các phần tử */
   box-sizing: border-box; /* Đảm bảo padding và border không làm thay đổi chiều rộng của phần tử */
 }
 
@@ -159,7 +177,25 @@ textarea.feedback {
   object-fit: cover;
 }
 
-/* CÃ¡c kiá»ƒu dÃ¡ng hiá»‡n cÃ³ */
+/* PHẦN NHẠC */
+.listen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.spot {
+  width: 100%;
+  max-width: 500px; /* Giới hạn chiều rộng tối đa */
+  height: auto; /* Đảm bảo tỷ lệ khung hình gốc */
+  object-fit: contain;
+}
+
+.lyrics {
+  margin-top: 20px;
+}
 
 .back {
   margin-top: 10px;
@@ -179,25 +215,5 @@ textarea.feedback {
 
 .back a:hover {
   background-color: #002a8b;
-  color: #e6e6e6; /* MÃ u chá»¯ khi hover */
-}
-
-.listen {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  margin-top: 20px;
-}
-
-.spot {
-  width: 100%;
-  max-width: 500px; /* Giới hạn chiều rộng tối đa */
-  height: auto; /* Đảm bảo tỷ lệ khung hình gốc */
-  object-fit: contain;
-  margin-top: 10px;
-}
-
-.lyrics {
-  margin-top: 20px;
+  color: #e6e6e6;
 }
