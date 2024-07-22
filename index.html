@@ -25,8 +25,8 @@
         <div class="contact-item">
           <i class="fa-brands fa-studiovinari"></i>
           <span class="contact-label">Học vấn:</span>
-          <a href="https://www.facebook.com/UIT.Fanpage"
-            target="_blank">Trường Đại học Công nghệ Thông tin, Đại học Quốc gia TP.HCM</a
+          <a href="https://www.facebook.com/UIT.Fanpage" target="_blank"
+            >Trường Đại học Công nghệ Thông tin, Đại học Quốc gia TP.HCM</a
           >
         </div>
         <div class="contact-item">
@@ -87,17 +87,22 @@
             </a>
           </div>
         </div>
+        <!-- modify this form HTML and place wherever you want your form -->
+        <form
+          id="message"
+          action="https://formspree.io/f/xwpevvza"
+          method="POST"
+        >
+          <textarea
+            name="message"
+            class="feedback"
+            placeholder="Nhắn gì đó cho mình đi, hoàn toàn ẩn danh nên bạn yên tâm nhá"
+            required
+          ></textarea>
+          <button type="submit">Gửi</button>
+        </form>
       </div>
     </div>
     <script src="script.js"></script>
   </body>
 </html>
-<script>
-  window.onload = function () {
-    const urlParams = new URLSearchParams(window.location.search);
-    const message = urlParams.get("message");
-    if (message) {
-      alert(message);
-    }
-  };
-</script>

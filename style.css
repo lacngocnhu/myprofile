@@ -58,19 +58,10 @@ h1 {
 }
 
 .contact-item a {
-  color: #3b5998;
+  color: #003ec4;
   text-decoration: none;
   margin-left: 5px;
 }
-
-/* input,
-textarea {
-  width: 100%;
-  padding: 10px;
-  margin-top: 5px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-} */
 
 .more-inf {
   margin-top: 20px;
@@ -81,7 +72,7 @@ textarea {
   border: 1px solid #ccc;
   padding: 10px;
   background-color: #f9f9f9;
-  border-radius: 30px;
+  border-radius: 10px;
   display: inline-block;
 }
 /* PHẦN INDEX.HTML */
@@ -116,13 +107,15 @@ textarea {
   height: 100px;
 }
 
-/* #feedbackForm {
+#message {
   width: 70%;
   max-width: 300px;
   margin: 0 auto;
+  margin-top: 20px;
   padding: 20px;
   background-color: #fff;
-  border-radius: 8px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -131,12 +124,36 @@ textarea.feedback {
   height: 150px;
   box-sizing: border-box;
   padding: 10px;
-  border-radius: 4px;
+  border-radius: 10px;
   border: 1px solid #ccc;
   resize: none;
   font-size: 16px;
   line-height: 1.5;
-} */
+  color: #333;
+}
+
+textarea.feedback:focus {
+  border-color: #9c9b9b;
+  outline: none;
+}
+
+button {
+  background-color: #0051ff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+  display: block;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #003ec4;
+}
 
 /* PHẦN GAME */
 .video-container {
@@ -205,7 +222,7 @@ textarea.feedback {
 .back a {
   display: inline-block;
   padding: 7px 10px;
-  background-color: #003ec4;
+  background-color: #0051ff;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -214,6 +231,6 @@ textarea.feedback {
 }
 
 .back a:hover {
-  background-color: #002a8b;
+  background-color: #003ec4;
   color: #e6e6e6;
 }
