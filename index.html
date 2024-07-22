@@ -106,3 +106,40 @@
     <script src="script.js"></script>
   </body>
 </html>
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    document
+      .getElementById("message")
+      .addEventListener("submit", function (event) {
+        event.preventDefault(); // Ngăn việc gửi form theo cách mặc định
+
+        const form = event.target;
+
+        fetch(form.action, {
+          method: form.method,
+          body: new FormData(form),
+          headers: {
+            Accept: "application/json",
+          },
+        })
+          .then((response) => {
+            if (response.ok) {
+              return response.text(); // Đọc phản hồi dưới dạng văn bản
+            } else {
+              throw new Error("Có lỗi xảy ra khi gửi form.");
+            }
+          })
+          .then((text) => {
+            alert("Form đã được gửi thành công!");
+            // Xử lý thông tin phản hồi nếu cần
+            console.log("Phản hồi:", text);
+            // Tải lại form nếu cần
+            form.reset();
+          })
+          .catch((error) => {
+            console.error("Lỗi:", error);
+            alert("Có lỗi xảy ra khi gửi form.");
+          });
+      });
+  });
+</script>
