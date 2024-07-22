@@ -76,19 +76,55 @@ h1 {
   display: inline-block;
 }
 /* PHẦN INDEX.HTML */
+.favourites-container {
+  position: relative;
+  margin-top: 20px;
+}
+
+.fv-button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+}
+
+.fv-button:hover {
+  background-color: #003ec4;
+  color: #fff;
+}
+
 .favourites {
   display: flex;
   flex-wrap: wrap;
   gap: 10px; /* Tạo khoảng cách giữa các phần tử */
   justify-content: center;
   margin-top: 20px;
+  max-height: 0; /* Bắt đầu ẩn khung */
+  overflow: hidden; /* Ẩn phần tử vượt quá */
+  opacity: 0; /* Bắt đầu với độ mờ */
+  transition: max-height 0.3s ease-out, opacity 0.9s ease-out; /* Thêm hiệu ứng chuyển đổi */
+}
+
+.favourites.show {
+  max-height: 1000px; /* Chiều cao tối đa khi hiển thị, điều chỉnh tùy thuộc vào nội dung */
+  opacity: 1; /* Hiển thị với độ mờ */
+}
+
+.favourite {
+  margin-bottom: 20px;
 }
 
 .favourite-label {
   flex: 1 1 calc(33.333% - 20px); /* Giảm đi khoảng cách để phù hợp với tổng chiều rộng của phần tử */
   box-sizing: border-box;
   text-align: center;
-  border: 1px solid #856666;
+  border: 1px solid #555;
   border-radius: 30px;
   width: 210px;
   display: inline-block;
@@ -112,7 +148,6 @@ h1 {
   max-width: 100%; /* Đảm bảo form không bị rộng hơn màn hình */
   box-sizing: border-box; /* Bao gồm padding và border vào kích thước tổng cộng */
   margin: 0 auto;
-  margin-top: 20px;
   padding: 20px;
   background-color: #fff;
   border: 1px solid #ccc;
@@ -138,21 +173,22 @@ textarea.feedback:focus {
   outline: none;
 }
 
-button {
+.send-button {
   display: block;
-  width: 100%; /* Đảm bảo nút gửi chiếm toàn bộ chiều rộng */
-  padding: 10px;
-  margin-top: 10px;
+  width: 100%; /* nút gửi chiếm toàn bộ chiều rộng */
+  padding: 0;
+  margin-top: 5px;
+  margin-bottom: -10px;
   border: none;
   border-radius: 10px;
-  background-color: #007bff;
-  color: white;
+  background-color: #ffffff;
+  color: #131313db;
   font-size: 16px;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #003ec4;
+.send-button:hover {
+  color: #000000;
 }
 
 /* PHẦN GAME */

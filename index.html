@@ -58,36 +58,42 @@
             mình, ấn vào từng cái thử đi.
           </p>
         </div>
-        <div class="favourites">
-          <div class="favourite">
-            <a href="game.html">
-              <div class="favourite-label">
-                <h3>Trò chơi</h3>
-                <img src="images/violet.jpg" class="images" />
-                <p>Liên quân Mobile</p>
-              </div>
-            </a>
-          </div>
-          <div class="favourite">
-            <a href="nhac.html">
-              <div class="favourite-label">
-                <h3>Nhạc</h3>
-                <img src="images/music.jpg" class="images" />
-                <p>Bao tiền một mớ bình yên</p>
-              </div>
-            </a>
-          </div>
-          <div class="favourite">
-            <a href="chill.html">
-              <div class="favourite-label">
-                <h3>Khác</h3>
-                <img src="images/saigon.jpg" class="images" />
-                <p>Đi dạo chill</p>
-              </div>
-            </a>
+        <div class="favourites-container">
+          <button class="fv-button" onclick="toggleFavourites()">
+            Sở thích của mình <i class="fas fa-chevron-down"></i>
+          </button>
+
+          <div class="favourites" id="favourites">
+            <div class="favourite">
+              <a href="game.html">
+                <div class="favourite-label">
+                  <h3>Trò chơi</h3>
+                  <img src="images/violet.jpg" class="images" />
+                  <p>Liên quân Mobile</p>
+                </div>
+              </a>
+            </div>
+            <div class="favourite">
+              <a href="nhac.html">
+                <div class="favourite-label">
+                  <h3>Nhạc</h3>
+                  <img src="images/music.jpg" class="images" />
+                  <p>Bao tiền một mớ bình yên</p>
+                </div>
+              </a>
+            </div>
+            <div class="favourite">
+              <a href="chill.html">
+                <div class="favourite-label">
+                  <h3>Khác</h3>
+                  <img src="images/saigon.jpg" class="images" />
+                  <p>Đi dạo chill</p>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
-        <!-- modify this form HTML and place wherever you want your form -->
+
         <form
           id="message"
           action="https://formspree.io/f/xwpevvza"
@@ -99,7 +105,7 @@
             placeholder="Nhắn gì đó cho mình đi, hoàn toàn ẩn danh nên bạn yên tâm nhá"
             required
           ></textarea>
-          <button type="submit">Gửi</button>
+          <button class="send-button" type="submit">Gửi</button>
         </form>
       </div>
     </div>
@@ -142,4 +148,8 @@
           });
       });
   });
+  function toggleFavourites() {
+    var favourites = document.getElementById("favourites");
+    favourites.classList.toggle("show");
+  }
 </script>
