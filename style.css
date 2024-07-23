@@ -76,7 +76,6 @@ body {
 
 .contact-item {
   display: flex;
-  align-items: center;
   margin-top: 10px;
   color: #555;
 }
@@ -250,8 +249,8 @@ textarea.feedback:focus {
 
 .chill-label {
   flex: 1 1 calc(20% - 10px); /* Đảm bảo mỗi phần tử chiếm 1/3 chiều rộng cộng thêm khoảng cách */
-  margin-top: 15px; /* Khoảng cách dưới các phần tử */
   box-sizing: border-box; /* Đảm bảo padding và border không làm thay đổi chiều rộng của phần tử */
+  margin-top: 10px;
 }
 
 .chill-images {
