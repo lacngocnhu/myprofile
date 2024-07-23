@@ -4,7 +4,37 @@ body {
   margin: 0;
   padding: 0;
 }
+/* PHẦN MENU CỦA HEADER */
+.header {
+  background-color: none;
+  padding: 0;
+  margin-top: 15px;
+}
 
+.header .menu {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header .menu a {
+  margin: 0 15px;
+  font-size: 18px;
+  color: #000000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.header .menu a.active {
+  font-weight: bold;
+  color: #000000;
+}
+
+.header .menu a:hover {
+  color: #000000;
+}
+
+/* PHẦN THÔNG TIN LIÊN HỆ */
 .contact-header {
   display: flex;
   align-items: center;
@@ -57,7 +87,7 @@ body {
 }
 
 .contact-item a {
-  color: #003ec4;
+  color: #0051ff;
   text-decoration: none;
   margin-left: 5px;
 }
