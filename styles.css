@@ -1,15 +1,8 @@
-.containers {
-  max-width: 650px;
-  text-align: center;
-  margin: 50px auto;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.random {
+  margin-top: 20px;
 }
 
 .quote-box {
-  margin: 20px 0;
   padding: 20px;
   border: 2px solid #555;
   border-radius: 10px;
@@ -22,6 +15,7 @@
 
 .quote-button {
   padding: 10px 20px;
+  margin-top: 20px;
   border: none;
   background-color: #0051ff;
   color: #fff;
