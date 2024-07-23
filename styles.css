@@ -1,25 +1,9 @@
-html,
-body {
-  height: 100%;
-  margin: 0;
-}
-
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f0f0f0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-h1 {
-  color: #0051ff;
-}
-
 .containers {
+  max-width: 650px;
   text-align: center;
-  background-color: #fff;
+  margin: 50px auto;
   padding: 20px;
+  background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
