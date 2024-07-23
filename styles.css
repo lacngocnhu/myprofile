@@ -24,18 +24,19 @@ h1 {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-#quote-box {
+.quote-box {
   margin: 20px 0;
   padding: 20px;
   border: 2px solid #555;
   border-radius: 10px;
 }
 
-#quote {
+.quote-box p {
   color: #555;
+  text-align: center;
 }
 
-button {
+.quote-button {
   padding: 10px 20px;
   border: none;
   background-color: #0051ff;
@@ -46,6 +47,6 @@ button {
   transition: background-color 0.3s;
 }
 
-button:hover {
+.quote-button:hover {
   background-color: #003ec4;
 }
