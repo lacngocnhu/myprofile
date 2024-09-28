@@ -8,8 +8,8 @@
   color: #ffffff; /* Màu chữ trắng cho các mục "Trang chủ", "Giải trí" */
 }
 
-.container.dark-theme.contact-iteam a {
-  color: #0051ff; /* Màu liên kết*/
+.container.dark-theme .contact-info a {
+  color: #0051ff; /* Màu link khi dark theme */
 }
 
 .container.dark-theme .contact-header a {
