@@ -28,6 +28,7 @@
 .container.dark-theme .feedback {
   border: 1px solid #666; /* Màu viền tối hơn */
   background-color: #3a3a3a; /* Màu nền tối */
+  color: #ffffff; /* Màu chữ khi bật dark theme */
 }
 .container.dark-theme .send-button {
   background-color: #3a3a3a;
