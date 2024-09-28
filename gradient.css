@@ -30,6 +30,12 @@
   background-color: #3a3a3a; /* Màu nền tối */
   color: #ffffff; /* Màu chữ khi bật dark theme */
 }
+.container.dark-theme .fv-button {
+  background-color: #2196f3;
+}
+.container.dark-theme .fv-button:hover {
+  background-color: #003ec4; /* Màu nền khi hover trong dark theme */
+}
 .container.dark-theme .send-button {
   background-color: #3a3a3a;
   color: #ffffff;
