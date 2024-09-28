@@ -117,3 +117,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
+
+const themeToggle = document.getElementById("themeToggle");
+const container = document.querySelector(".container");
+
+// Kiểm tra xem người dùng đã chọn giao diện trước đó chưa
+window.onload = function () {
+  const savedTheme = localStorage.getItem("selectedTheme");
+  if (savedTheme === "dark-theme") {
+    themeToggle.checked = true; // Đặt checkbox ở trạng thái checked
+    container.classList.add("dark-theme"); // Thêm lớp dark nếu đã lưu
+  } else {
+    container.classList.remove("dark-theme"); // Xóa lớp dark
+  }
+};
+
+// Sự kiện khi gạt nút
+themeToggle.addEventListener("change", function () {
+  if (themeToggle.checked) {
+    container.classList.add("dark-theme"); // Thêm lớp dark cho container
+    localStorage.setItem("selectedTheme", "dark-theme"); // Lưu trạng thái dark
+  } else {
+    container.classList.remove("dark-theme"); // Xóa lớp dark
+    localStorage.removeItem("selectedTheme"); // Xóa lưu trữ giao diện
+  }
+});
