@@ -118,28 +118,30 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-const themeToggle = document.getElementById("themeToggle");
-const container = document.querySelector(".container");
+document.addEventListener("DOMContentLoaded", function () {
+  const themeToggle = document.getElementById("themeToggle");
+  const container = document.querySelector(".container");
 
-// Kiểm tra xem người dùng đã chọn giao diện trước đó chưa
-window.onload = function () {
+  // Kiểm tra xem người dùng đã chọn dark mode trước đó chưa
   const savedTheme = localStorage.getItem("selectedTheme");
   if (savedTheme === "dark-theme") {
-    themeToggle.checked = true; // Đặt checkbox ở trạng thái checked
-    container.classList.add("dark-theme"); // Thêm lớp dark nếu đã lưu
-  } else {
-    container.classList.remove("dark-theme"); // Xóa lớp dark
+    container.classList.add("dark-theme");
+    if (themeToggle) {
+      themeToggle.checked = true; // Đồng bộ checkbox trạng thái với dark mode
+    }
   }
-};
 
-// Sự kiện khi gạt nút
-themeToggle.addEventListener("change", function () {
-  if (themeToggle.checked) {
-    container.classList.add("dark-theme"); // Thêm lớp dark cho container
-    localStorage.setItem("selectedTheme", "dark-theme"); // Lưu trạng thái dark
-  } else {
-    container.classList.remove("dark-theme"); // Xóa lớp dark
-    localStorage.removeItem("selectedTheme"); // Xóa lưu trữ giao diện
+  // Sự kiện khi gạt nút chuyển đổi
+  if (themeToggle) {
+    themeToggle.addEventListener("change", function () {
+      if (themeToggle.checked) {
+        container.classList.add("dark-theme");
+        localStorage.setItem("selectedTheme", "dark-theme");
+      } else {
+        container.classList.remove("dark-theme");
+        localStorage.removeItem("selectedTheme");
+      }
+    });
   }
 });
 
