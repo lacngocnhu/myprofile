@@ -85,26 +85,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   //RANDOM CHÂM NGÔN
   const quotes = [
-    "Cà ton bon si la xua ki nê.",
-    "Mèo kêu gà gáy, chuột chù cá sấu.",
-    "Hương vị mây bay trên dải ngân hà.",
-    "Bông hoa xà phòng nở rộ dưới ánh trăng.",
-    "Đêm nay trăng sáng, gió thổi lá rơi.",
-    "Con cá bơi lội trong nồi cơm điện.",
-    "Chú chim bay qua cầu vồng bằng bánh mì.",
-    "Chiếc lá rơi rụng trên biển xanh rì rào.",
-    "Bầu trời xanh thẳm, mây trắng phau phau.",
-    "Cơn mưa rào tắm cho bụi cây xanh.",
-    "Hạt cát nhảy múa trong mắt bão.",
-    "Mặt trời mọc đằng tây, lặn đằng nam.",
-    "Ngôi sao băng bay qua ao nhà hàng xóm.",
-    "Cây dừa đứng hát giữa lòng thành phố.",
-    "Bánh mì trứng chiên bay lượn trong vũ trụ.",
-    "Hồ nước mắt cá sấu chảy ra biển.",
-    "Bàn tay vỗ nhẹ trên đám mây lười.",
-    "Con vịt bơi qua sông bằng đôi cánh chuồn chuồn.",
-    "Đêm nay ngôi sao lấp lánh trong tủ lạnh.",
-    "Con đường lá vàng rơi giữa lòng đại dương.",
+    "Cơm gà xối mỡ",
+    "Cơm gà nướng",
+    "Cơm gà Jollibee/Texas/...",
+    "Bún chả giò",
+    "Bún đậu mắm tôm",
+    "Bún bò",
+    "Cơm tấm",
+    "Bún riêu",
+    "Cơm xèo",
+    "Bún mắm nêm",
   ];
 
   const newQuoteButton = document.getElementById("new-quote");
